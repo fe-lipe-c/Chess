@@ -12,7 +12,7 @@ class Player_Profile:
         self.username = username
         self.profile = self.player_profile()
         self.stats = self.player_stats()
-        self.online = self.isonline()
+        # self.online = self.isonline()
 
     def player_profile(self):
         """Get player profile."""
@@ -31,6 +31,19 @@ class Player_Profile:
         url = "https://api.chess.com/pub/player/" + self.username + "/is-online"
         response = requests.get(url).json()
         return response["online"]
+
+    def games(self, year, month):
+        """Get player games."""
+        url = (
+            "https://api.chess.com/pub/player/"
+            + self.username
+            + "/games/"
+            + str(year)
+            + "/"
+            + str(month)
+        )
+        response = requests.get(url).json()
+        return pd.json_normalize(response["games"])
 
 
 def titled_players(self, title):
