@@ -1,8 +1,38 @@
 """Notebook with exploration of chess.com api."""
 
-from chessdotcom_api import Player_Profile
 import chess
 import chess.svg
+
+from chessdotcom_api import Player_Profile
+
+
+# FEN
+
+board = chess.Board("8/8/8/2k5/4K3/8/8/8 w - - 4 45")
+board.legal_moves
+board.fen()
+# '8/8/8/2k5/4K3/8/8/8 w - - 4 45'
+print(board)
+# r n b q k b n r
+# p p p p p p p p
+# . . . . . . . .
+# . . . . . . . .
+# . . . . . . . .
+# . . . . . . . .
+# P P P P P P P P
+# R N B Q K B N R
+
+player_pieces = ["K"]
+opponent_pieces = ["K", "Q"]
+player_color = np.random.choice(["w", "b"])
+
+number_pieces = len(player_pieces) + len(opponent_pieces)
+
+for i in range(number_pieces):
+    if i == 0:
+        row = np.random.randint(1, 9)
+        line = np.random.randint(1, 9)
+
 
 username = "fe_lipe_br"
 
