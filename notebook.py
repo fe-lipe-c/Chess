@@ -34,20 +34,6 @@ for i in range(number_pieces):
         line = np.random.randint(1, 9)
 
 
-username = "fe_lipe_br"
-
-player = Player_Profile(username)
-
-df = player.games(2022, 10)
-
-df.columns
-
-# Index(['url', 'pgn', 'time_control', 'end_time', 'rated', 'tcn', 'uuid',
-#        'initial_setup', 'fen', 'time_class', 'rules', 'white.rating',
-#        'white.result', 'white.@id', 'white.username', 'white.uuid',
-#        'black.rating', 'black.result', 'black.@id', 'black.username',
-#        'black.uuid', 'accuracies.white', 'accuracies.black', 'start_time'],
-
 games_pgn = []
 for i in df["pgn"]:
     games_pgn.append(i.split("\n")[-2])
