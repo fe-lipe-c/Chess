@@ -70,20 +70,21 @@ def populate_board_det(brd, w_pieces, b_pieces):
                 pieces.pop()
 
 
-clean_board = [[" " for x in range(8)] for y in range(8)]
-b_pieces = ["Q"]
-w_pieces = []
-place_kings(clean_board)
-populate_board_det(clean_board, w_pieces, b_pieces)
-# Q 5 4
-clean_board
-pawn_on_promotion_square("Q", 5)
-fen_from_board(clean_board)
-
-
-type(rank_white)
-clean_board[rank_white, rank_black]
-
-teste = [1, 2, 3]
-teste.pop()
-teste
+#
+# clean_board = [[" " for x in range(8)] for y in range(8)]
+# b_pieces = ["Q"]
+# w_pieces = []
+# place_kings(clean_board)
+# populate_board_det(clean_board, w_pieces, b_pieces)
+# # Q 5 4
+# clean_board
+# pawn_on_promotion_square("Q", 5)
+# fen_from_board(clean_board)
+#
+#
+# type(rank_white)
+# clean_board[rank_white, rank_black]
+#
+# teste = [1, 2, 3]
+# teste.pop()
+# teste
